@@ -63,7 +63,7 @@ const Entry=({entry})=>{
       (<>
       <h3 className="title">{entry.title}</h3>
       <h3 className="details">{entry.details}</h3>
-      <small>Created At: {formattedDate}</small></>)
+      <small>Created On: {formattedDate}</small></>)
       }
 
       {isediting === false?
@@ -75,12 +75,6 @@ const Entry=({entry})=>{
       </>
       ):<></>
       }
-      
-      
-      
-
-      
-      
     
     </div>
   )

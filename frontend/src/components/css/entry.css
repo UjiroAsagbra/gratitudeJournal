@@ -1,5 +1,5 @@
 .newentry,.entry-title-editing{
-  background-color: #fff;
+  background-color: whitesmoke;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,13 +16,14 @@
 
 .details-input,
 .title-input,.entry-title-editing,.entry-details-editing{
+  background-color: whitesmoke;
   width: 20rem;
   margin-bottom: 1rem;
   padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 1rem;
   outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .details-input,.entry-details-editing{
@@ -35,7 +36,7 @@
   box-shadow: 0 0 5px rgba(223, 159, 41, 0.5);
 }
 
-.button.save,.button.new-save,.button.edit{
+.button.save,.button.edit{
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
@@ -46,6 +47,17 @@
   cursor: pointer;
   margin-left: 0.6rem;
   margin-bottom: 1rem;
+}
+
+.button.new{
+  margin-left: -10rem;
+}
+
+.button.new.cancel{
+  margin-top: -3.8rem;
+  margin-left: 3rem;
+
+
 }
 
 .button.cancel, .button.delete, .button.new-cancel{
@@ -74,6 +86,7 @@
 
 .button:active {
   transform: scale(0.98)}
+
   .entries{
     margin-left: 1rem;
   }
