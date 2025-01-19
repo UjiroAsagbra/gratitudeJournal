@@ -1,0 +1,99 @@
+.newentry,.entry-title-editing{
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+}
+.entry-details-editing{
+  margin-left: 2rem;
+}
+
+.title-input,.entry-title-editing{
+   height: 5vh;
+ }
+
+.details-input,.entry-details-editing{
+  height: 20vh;
+  }
+
+.details-input,
+.title-input,.entry-title-editing,.entry-details-editing{
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.details-input:focus,
+.title-input:focus {
+  border-color: rgb(223, 159, 41);
+  box-shadow: 0 0 5px rgba(223, 159, 41, 0.5);
+}
+
+.button.save,.button.new-save,.button.edit{
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: rgb(223, 159, 41);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.button.cancel, .button.delete, .button.new-cancel{
+  background: rgb(239, 89, 89);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.6rem;
+}
+
+.button.save:hover {
+  background: rgb(239, 196, 121);
+}
+.button.edit:hover {
+  background: rgb(239, 196, 121);
+}
+.button.cancel:hover {
+  background: rgb(225, 125, 125);
+}
+.button.delete:hover {
+  background: rgb(225, 125, 125);}
+
+.button:active {
+  transform: scale(0.98)}
+  .entries{
+    margin-left: 1rem;
+  }
+  .details{
+    font-weight:lighter;
+  }
+  
+@media (max-width: 600px) {
+  .newentry,.entry-details-editing,.entry-title-editing{
+    margin-left: 0.2rem;
+  }
+  .button {
+    width: 6rem;
+    margin-top: 1em;
+  }
+  .button.new-save{
+    margin-top: 0rem;
+    margin-left: -5rem
+  }
+
+  
+  
+  }

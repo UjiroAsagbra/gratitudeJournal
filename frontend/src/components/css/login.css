@@ -1,0 +1,104 @@
+
+.users {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-left: 1rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  
+}
+
+
+/* Form Title */
+.users h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: rgb(223, 159, 41);
+}
+
+/* Input Fields */
+.text_area {
+  margin-bottom: 1rem;
+}
+
+.text_input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-left: -0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.text_input:focus {
+  border-color: rgb(248, 210, 141);
+  box-shadow: 0 0 5px rgb(248, 210, 141);
+}
+
+/* Signin Button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgb(223, 159, 41);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: rgb(248, 210, 141);
+}
+
+/* Link */
+a.link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgb(223, 159, 41);
+  transition: color 0.3s ease-in-out;
+}
+
+a.link:hover {
+  color: rgb(248, 210, 141);
+}
+
+p {
+  font-size: 0.9rem;
+  color: #ff5722;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .users {
+   margin-left: 0rem;
+    padding: 1.5rem;
+    width: 87%;
+  }
+
+
+  .users h4 {
+    font-size: 1.5rem;
+  }
+
+  .text_input {
+    font-size: 0.9rem;
+    width: 20rem;
+  
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
