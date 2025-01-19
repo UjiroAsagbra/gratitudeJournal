@@ -14,10 +14,6 @@
    height: 5vh;
  }
 
-.details-input,.entry-details-editing{
-  height: 20vh;
-  }
-
 .details-input,
 .title-input,.entry-title-editing,.entry-details-editing{
   width: 20rem;
@@ -27,6 +23,10 @@
   border-radius: 5px;
   font-size: 1rem;
   outline: none;
+}
+
+.details-input,.entry-details-editing{
+  height: 20vh;
 }
 
 .details-input:focus,
