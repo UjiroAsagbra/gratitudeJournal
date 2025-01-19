@@ -7,9 +7,12 @@ import Signup from "./pages/Signup"
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e6dfb13 (Initial Commit)
 function App() {
 
   return (
@@ -20,7 +23,10 @@ function App() {
         <Route path="/signup" element= {<Signup/>}/>
         <Route path="/entrylist" element= {<EntryList/>}/>
       </Routes>
+<<<<<<< HEAD
       
+=======
+>>>>>>> e6dfb13 (Initial Commit)
     </BrowserRouter>
    
   )

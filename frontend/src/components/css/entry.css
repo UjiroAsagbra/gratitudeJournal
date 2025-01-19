@@ -1,5 +1,9 @@
 .newentry,.entry-title-editing{
+<<<<<<< HEAD
   background-color: whitesmoke;
+=======
+  background-color: #fff;
+>>>>>>> e6dfb13 (Initial Commit)
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,6 +18,7 @@
    height: 5vh;
  }
 
+<<<<<<< HEAD
 .details-input,
 .title-input,.entry-title-editing,.entry-details-editing{
   background-color: whitesmoke;
@@ -28,6 +33,21 @@
 
 .details-input,.entry-details-editing{
   height: 20vh;
+=======
+.details-input,.entry-details-editing{
+  height: 20vh;
+  }
+
+.details-input,
+.title-input,.entry-title-editing,.entry-details-editing{
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+>>>>>>> e6dfb13 (Initial Commit)
 }
 
 .details-input:focus,
@@ -36,7 +56,11 @@
   box-shadow: 0 0 5px rgba(223, 159, 41, 0.5);
 }
 
+<<<<<<< HEAD
 .button.save,.button.edit{
+=======
+.button.save,.button.new-save,.button.edit{
+>>>>>>> e6dfb13 (Initial Commit)
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
@@ -49,6 +73,7 @@
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
 .button.new{
   margin-left: -10rem;
 }
@@ -61,6 +86,9 @@
 }
 
 .button.cancel, .button.delete, .button.new-cancel, button.logout{
+=======
+.button.cancel, .button.delete, .button.new-cancel{
+>>>>>>> e6dfb13 (Initial Commit)
   background: rgb(239, 89, 89);
   padding: 0.8rem 1.5rem;
   border: none;
@@ -71,6 +99,7 @@
   cursor: pointer;
   margin-left: 0.6rem;
 }
+<<<<<<< HEAD
 .button.logout{
  float:right;
  margin-top:-5rem;
@@ -79,6 +108,8 @@
  
   
 }
+=======
+>>>>>>> e6dfb13 (Initial Commit)
 
 .button.save:hover {
   background: rgb(239, 196, 121);
@@ -94,10 +125,15 @@
 
 .button:active {
   transform: scale(0.98)}
+<<<<<<< HEAD
 
   .entries{
   margin-left: 1rem;
  
+=======
+  .entries{
+    margin-left: 1rem;
+>>>>>>> e6dfb13 (Initial Commit)
   }
   .details{
     font-weight:lighter;
@@ -109,6 +145,7 @@
   }
   .button {
     width: 6rem;
+<<<<<<< HEAD
     margin-top: 1rem;
   }
   .button.new.save{
@@ -122,6 +159,15 @@
     padding-top: 0.2rem;
     
   }
+=======
+    margin-top: 1em;
+  }
+  .button.new-save{
+    margin-top: 0rem;
+    margin-left: -5rem
+  }
+
+>>>>>>> e6dfb13 (Initial Commit)
   
   
   }

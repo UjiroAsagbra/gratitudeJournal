@@ -1,8 +1,12 @@
 import {useState} from  "react"
 import { useUserSignup } from "../users/signup"
 import {Navigate} from "react-router-dom"
+<<<<<<< HEAD
 import "../components/css/login.css"
 
+=======
+import '../components/css/login.css'
+>>>>>>> e6dfb13 (Initial Commit)
 
 
 const Signin = () => {
@@ -11,7 +15,10 @@ const Signin = () => {
     email: "",
     password: ""
   })
+<<<<<<< HEAD
   const [noUser, setNoUser] = useState(false)
+=======
+>>>>>>> e6dfb13 (Initial Commit)
   const [goTo, setGoTo] = useState(null)
   const {loginUser} = useUserSignup()
 
@@ -23,9 +30,16 @@ const Signin = () => {
         pathname: "/entrylist" 
       });
      } else{
+<<<<<<< HEAD
       setNoUser(true)}
      
 
+=======
+      setGoTo({
+        pathname: "/signup" 
+      });
+     }
+>>>>>>> e6dfb13 (Initial Commit)
 
   }
   if (goTo){
@@ -39,10 +53,13 @@ const Signin = () => {
     <div className="form">
     <div className="text_area">
       <input
+<<<<<<< HEAD
       onKeyDown={(e) => {
         if (e.key === "Enter")
           handleSignin();
         }}
+=======
+>>>>>>> e6dfb13 (Initial Commit)
         id="email"
         type="text"
         className="text_input"
@@ -55,10 +72,13 @@ const Signin = () => {
       </div>
       <div className="text_area">
       <input
+<<<<<<< HEAD
       onKeyDown={(e) => {
         if (e.key === "Enter")
           handleSignin();
         }}
+=======
+>>>>>>> e6dfb13 (Initial Commit)
         id="password"
         type="password"
         className="text_input"
@@ -71,11 +91,16 @@ const Signin = () => {
       </div>
       
       <button className= " btn " onClick={handleSignin}>Sign-in</button>
+<<<<<<< HEAD
       {noUser===true &&(
     <p className="link" href="/signup">No user found!!</p>
   )}
   </div>
   {<a className="link" href="/signup">No account? Create one!</a>}
+=======
+  </div>
+  <a className="link" href="/signup">Sign Up</a>
+>>>>>>> e6dfb13 (Initial Commit)
      
     </div>
   )

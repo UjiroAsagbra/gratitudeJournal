@@ -23,7 +23,11 @@ const authenticateToken = async (req, res, next) => {
     next();
   } catch (err) {
     console.error("Token validation error:", err);
+<<<<<<< HEAD
     return res.status(403).json({ message: "Session expired. Please sign in" });
+=======
+    return res.status(403).json({ message: "Invalid or expired token." });
+>>>>>>> e6dfb13 (Initial Commit)
   }
 };
 export default authenticateToken
