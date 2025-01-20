@@ -3,6 +3,9 @@ import './components/css/app.css'
 import EntryList from "./pages/EntryList";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup"
+import './components/css/entry.css'
+import "./components/css/login.css"
+
 
 
 
