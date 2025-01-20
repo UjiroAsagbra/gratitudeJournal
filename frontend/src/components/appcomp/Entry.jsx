@@ -19,14 +19,20 @@ const Entry=({entry})=>{
 
   const handleUpdate = async(id,updatedEntry)=> {
     const {success,message} = await updateEntry(id,updatedEntry)
-    
-
+    if(success){
+      alert(message)
+    }
     setIsediting(false)
 
   }
 
   const handleDelete = async (id) => {
-		const { success, message } = await deleteEntry(id);
+    let text = "Are you sure you want to delete?";
+              if (confirm(text) == true){
+		const { success, message } = await deleteEntry(id)
+    if(success){
+      alert(message)
+    }};
     
 	};
   const handleCancel = () => {

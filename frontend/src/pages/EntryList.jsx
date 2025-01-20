@@ -10,17 +10,20 @@ const EntryList = () => {
   useEffect(() => {
 		fetchEntries();
 	}, [fetchEntries]);
-
+  
+  const sortedEntries = [...entries].sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  );
 
 return(
 <>
   <NewEntry/>
   <div className="entries">
  
-{entries.map((entry) => (
+{sortedEntries.map((entry) => (
           <Entry key={entry._id} entry={entry} />))}
 
-  {entries.length === 0 && (
+  {sortedEntries.length === 0 && (
     <h2 >Create Your First Entry</h2>
   )}
 

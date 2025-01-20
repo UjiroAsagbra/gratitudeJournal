@@ -2,21 +2,22 @@ import { useState } from "react"
 import { useJournalEntry } from "../../entries/entry";
 
 const NewEntry = () => {
-
+ 
   const [newEntry, setNewEntry] = useState({
     title: "",
     details: ""
   });
 
   const {createEntry, fetchEntries} = useJournalEntry();
+ 
 
   const addEntry = async() => {
     const {success, message} = await createEntry(newEntry)
-    const notify = () => toast("Wow so easy!");
+     
    
     if (success){
+      alert(message)
       await fetchEntries();
-      ;
       
       setNewEntry({ 
         title: "",
@@ -55,12 +56,11 @@ const NewEntry = () => {
           autoComplete="off"
           
         />
-        <button className= " button new-save" onClick={addEntry}>Save</button>
-        <button className= " button new-cancel" onClick={handleCancel}>Cancel</button>
-        
- 
-       
+        <button className= " button new save" onClick={addEntry}>Save</button>
+        <button className= " button new cancel" onClick={handleCancel}>Cancel</button>
+      
       </div>
+      
     </>
   )
 }
