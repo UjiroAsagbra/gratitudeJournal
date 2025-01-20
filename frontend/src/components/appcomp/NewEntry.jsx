@@ -13,9 +13,10 @@ const NewEntry = () => {
 
   const addEntry = async() => {
     const {success, message} = await createEntry(newEntry)
-     
-   
-    if (success){
+    if(!success){
+      alert(message)
+    }
+   else{
       alert(message)
       await fetchEntries();
       
@@ -26,6 +27,7 @@ const NewEntry = () => {
     }
     
   }
+  
   const handleCancel = () => {
     setNewEntry({ 
       title: "",

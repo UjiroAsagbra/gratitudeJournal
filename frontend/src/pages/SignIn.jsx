@@ -10,6 +10,7 @@ const Signin = () => {
     email: "",
     password: ""
   })
+  const [noUser, setNoUser] = useState(false)
   const [goTo, setGoTo] = useState(null)
   const {loginUser} = useUserSignup()
 
@@ -21,10 +22,9 @@ const Signin = () => {
         pathname: "/entrylist" 
       });
      } else{
-      setGoTo({
-        pathname: "/signup" 
-      });
-     }
+      setNoUser(true)}
+     
+
 
   }
   if (goTo){
@@ -38,6 +38,10 @@ const Signin = () => {
     <div className="form">
     <div className="text_area">
       <input
+      onKeyDown={(e) => {
+        if (e.key === "Enter")
+          handleSignin();
+        }}
         id="email"
         type="text"
         className="text_input"
@@ -50,6 +54,10 @@ const Signin = () => {
       </div>
       <div className="text_area">
       <input
+      onKeyDown={(e) => {
+        if (e.key === "Enter")
+          handleSignin();
+        }}
         id="password"
         type="password"
         className="text_input"
@@ -62,8 +70,11 @@ const Signin = () => {
       </div>
       
       <button className= " btn " onClick={handleSignin}>Sign-in</button>
+      {noUser===true &&(
+    <p className="link" href="/signup">No user found!!</p>
+  )}
   </div>
-  <a className="link" href="/signup">Sign Up</a>
+  {<a className="link" href="/signup">No account? Create one!</a>}
      
     </div>
   )

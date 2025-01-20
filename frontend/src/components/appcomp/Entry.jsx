@@ -19,7 +19,9 @@ const Entry=({entry})=>{
 
   const handleUpdate = async(id,updatedEntry)=> {
     const {success,message} = await updateEntry(id,updatedEntry)
-    if(success){
+    if(!success){
+      alert(message)
+    }else{
       alert(message)
     }
     setIsediting(false)
@@ -30,7 +32,9 @@ const Entry=({entry})=>{
     let text = "Are you sure you want to delete?";
               if (confirm(text) == true){
 		const { success, message } = await deleteEntry(id)
-    if(success){
+    if(!success){
+      alert(message)
+    }else{
       alert(message)
     }};
     

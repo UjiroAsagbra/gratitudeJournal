@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react"
 import './components/css/app.css'
 import EntryList from "./pages/EntryList";
 import Signin from "./pages/Signin";

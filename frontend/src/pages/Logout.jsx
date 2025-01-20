@@ -7,13 +7,13 @@ const LogoutButton = () => {
   const { logout } = useUserSignup();
 
   const handleLogout = () => {
-    logout(); // Call the logout function
+    logout(); 
     window.location.href = '/'
  
   };
 
   return (
-    <button onClick={handleLogout} className="logout-button">
+    <button onClick={handleLogout} className="button logout">
       Logout
     </button>
   );

@@ -17,6 +17,7 @@ const EntryList = () => {
 
 return(
 <>
+<LogoutButton/>
   <NewEntry/>
   <div className="entries">
  

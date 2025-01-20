@@ -66,6 +66,10 @@ const validateEmail = (email) => {
       <div className="form">
       <div className="text_area">
     <input
+    onKeyDown={(e) => {
+      if (e.key === "Enter")
+        handleSignup();
+      }}
         id="name"
         type="text"
         className="text_input"
@@ -78,6 +82,10 @@ const validateEmail = (email) => {
       </div>
        <div className="text_area">
       <input
+       onKeyDown={(e) => {
+        if (e.key === "Enter")
+          handleSignup();
+        }}
         id="email"
         type="text"
         className="text_input"
@@ -95,6 +103,10 @@ const validateEmail = (email) => {
        <p>{emailMessage}</p>
       <div className="text_area">
       <input
+       onKeyDown={(e) => {
+        if (e.key === "Enter")
+          handleSignup();
+        }}
         id="password"
         type="password"
         className="text_input"
