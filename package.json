@@ -3,15 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "dev": "NODE_ENV=development nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "NODE_ENV=production node backend/server.js"
-=======
-    "dev": "nodemon backend/server.js",
-    "build": "vite build",
-    "serve": "vite preview"
->>>>>>> e6dfb13 (Initial Commit)
   },
   "type": "module",
   "keywords": [],
@@ -24,12 +18,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-<<<<<<< HEAD
     "mongoose": "^8.9.3"
-=======
-    "mongoose": "^8.9.3",
-    "react-toastify": "^11.0.3"
->>>>>>> e6dfb13 (Initial Commit)
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
