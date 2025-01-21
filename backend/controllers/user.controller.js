@@ -29,33 +29,6 @@ export const Signup = async(req, res) => {
       return res.status(500).json({ message: 'Error registering new user' });
     };
     }
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-  /*try {
-    const users = req.body
-    const hashedPassword = await bcrypt.hash(users.password, 10)
-    const user = { username: users.username, email: users.email, password: hashedPassword }
-    const newUser = new User(user)
-    
-    await newUser.save();
-
-    res.status(201).json({success:true, data: newUser})
-  } catch (error) {
-    console.error("error adding user:" , error.message);
-    res.status(500).json({success:false, message: "server error"})
-  }
-*/
->>>>>>> e6dfb13 (Initial Commit)
 }
   export const Signin = async(req, res) => {
     try {

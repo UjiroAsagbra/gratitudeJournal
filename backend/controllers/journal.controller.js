@@ -30,11 +30,6 @@ const entry = await Journal.create({
 const newEntry = await entry.save();
 
   res.status(201).json(newEntry)
-<<<<<<< HEAD
-=======
-  
-  console.log("from control: ", newEntry)
->>>>>>> e6dfb13 (Initial Commit)
 
 }catch(error){
   res.status(500).json({ success: false, message: "Server error" });
