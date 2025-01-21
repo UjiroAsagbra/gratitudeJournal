@@ -96,7 +96,8 @@
   transform: scale(0.98)}
 
   .entries{
-    margin-left: 1rem;
+  margin-left: 1rem;
+ 
   }
   .details{
     font-weight:lighter;

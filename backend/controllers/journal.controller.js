@@ -30,8 +30,6 @@ const entry = await Journal.create({
 const newEntry = await entry.save();
 
   res.status(201).json(newEntry)
-  
-  console.log("from control: ", newEntry)
 
 }catch(error){
   res.status(500).json({ success: false, message: "Server error" });
