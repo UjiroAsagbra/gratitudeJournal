@@ -1,6 +1,7 @@
 import {create} from "zustand"
 
 export const useUserSignup = create((set) => ({
+  
   user: [],
   authToken: null,
   setUser: (user)=> set({user}),
@@ -9,7 +10,8 @@ export const useUserSignup = create((set) => ({
       return { success: false, message: "Enter All Details" };
     }
     try {
-      const res = await fetch("/api/users/signup", {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001"
+      const res = await fetch(`${backendURL}/api/users/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +42,9 @@ export const useUserSignup = create((set) => ({
       return{success:false, message: "Enter Email and Password"}
     }
     try {
-      const res = await fetch("/api/users/signin", {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+
+      const res = await fetch(`${backendURL}/api/users/signin`, {
         method: "POST",
         headers: {
           "Content-Type" : "application/json",
@@ -64,7 +68,9 @@ export const useUserSignup = create((set) => ({
   return { success: false, message: error.message }}},
 
   logout: () => {
-    fetch('/api/users/logout', { method: 'POST' })
+    const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+
+    fetch(`${backendURL}/api/users/logout`, { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
