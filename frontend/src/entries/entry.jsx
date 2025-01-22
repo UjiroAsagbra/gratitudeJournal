@@ -68,12 +68,7 @@ export const useJournalEntry = create((set,get) => ({
         } 
 
         if (data && data._id){
-<<<<<<< HEAD
                  
-=======
-          console.log("new entry added:", data)
-          
->>>>>>> e6dfb13 (Initial Commit)
           return { success: true, message: "Entry added successfully" , entry:data}
         }else{
           console.error("missing _id in response:", data)

@@ -66,13 +66,10 @@ const validateEmail = (email) => {
       <div className="form">
       <div className="text_area">
     <input
-<<<<<<< HEAD
     onKeyDown={(e) => {
       if (e.key === "Enter")
         handleSignup();
       }}
-=======
->>>>>>> e6dfb13 (Initial Commit)
         id="name"
         type="text"
         className="text_input"
@@ -85,13 +82,10 @@ const validateEmail = (email) => {
       </div>
        <div className="text_area">
       <input
-<<<<<<< HEAD
        onKeyDown={(e) => {
         if (e.key === "Enter")
           handleSignup();
         }}
-=======
->>>>>>> e6dfb13 (Initial Commit)
         id="email"
         type="text"
         className="text_input"
@@ -109,13 +103,10 @@ const validateEmail = (email) => {
        <p>{emailMessage}</p>
       <div className="text_area">
       <input
-<<<<<<< HEAD
        onKeyDown={(e) => {
         if (e.key === "Enter")
           handleSignup();
         }}
-=======
->>>>>>> e6dfb13 (Initial Commit)
         id="password"
         type="password"
         className="text_input"

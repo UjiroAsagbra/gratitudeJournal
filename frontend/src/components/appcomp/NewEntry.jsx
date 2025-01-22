@@ -2,18 +2,13 @@ import { useState } from "react"
 import { useJournalEntry } from "../../entries/entry";
 
 const NewEntry = () => {
-<<<<<<< HEAD
  
-=======
-
->>>>>>> e6dfb13 (Initial Commit)
   const [newEntry, setNewEntry] = useState({
     title: "",
     details: ""
   });
 
   const {createEntry, fetchEntries} = useJournalEntry();
-<<<<<<< HEAD
  
 
   const addEntry = async() => {
@@ -24,16 +19,6 @@ const NewEntry = () => {
    else{
       alert(message)
       await fetchEntries();
-=======
-
-  const addEntry = async() => {
-    const {success, message} = await createEntry(newEntry)
-    const notify = () => toast("Wow so easy!");
-   
-    if (success){
-      await fetchEntries();
-      ;
->>>>>>> e6dfb13 (Initial Commit)
       
       setNewEntry({ 
         title: "",
@@ -42,10 +27,7 @@ const NewEntry = () => {
     }
     
   }
-<<<<<<< HEAD
   
-=======
->>>>>>> e6dfb13 (Initial Commit)
   const handleCancel = () => {
     setNewEntry({ 
       title: "",
@@ -76,20 +58,11 @@ const NewEntry = () => {
           autoComplete="off"
           
         />
-<<<<<<< HEAD
         <button className= " button new save" onClick={addEntry}>Save</button>
         <button className= " button new cancel" onClick={handleCancel}>Cancel</button>
       
       </div>
       
-=======
-        <button className= " button new-save" onClick={addEntry}>Save</button>
-        <button className= " button new-cancel" onClick={handleCancel}>Cancel</button>
-        
- 
-       
-      </div>
->>>>>>> e6dfb13 (Initial Commit)
     </>
   )
 }

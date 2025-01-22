@@ -19,22 +19,16 @@ const Entry=({entry})=>{
 
   const handleUpdate = async(id,updatedEntry)=> {
     const {success,message} = await updateEntry(id,updatedEntry)
-<<<<<<< HEAD
     if(!success){
       alert(message)
     }else{
       alert(message)
     }
-=======
-    
-
->>>>>>> e6dfb13 (Initial Commit)
     setIsediting(false)
 
   }
 
   const handleDelete = async (id) => {
-<<<<<<< HEAD
     let text = "Are you sure you want to delete?";
               if (confirm(text) == true){
 		const { success, message } = await deleteEntry(id)
@@ -43,9 +37,6 @@ const Entry=({entry})=>{
     }else{
       alert(message)
     }};
-=======
-		const { success, message } = await deleteEntry(id);
->>>>>>> e6dfb13 (Initial Commit)
     
 	};
   const handleCancel = () => {
@@ -82,11 +73,7 @@ const Entry=({entry})=>{
       (<>
       <h3 className="title">{entry.title}</h3>
       <h3 className="details">{entry.details}</h3>
-<<<<<<< HEAD
       <small>Created On: {formattedDate}</small></>)
-=======
-      <small>Created At: {formattedDate}</small></>)
->>>>>>> e6dfb13 (Initial Commit)
       }
 
       {isediting === false?
@@ -98,15 +85,6 @@ const Entry=({entry})=>{
       </>
       ):<></>
       }
-<<<<<<< HEAD
-=======
-      
-      
-      
-
-      
-      
->>>>>>> e6dfb13 (Initial Commit)
     
     </div>
   )
