@@ -13,7 +13,14 @@ const app = express();
 const PORT = process.env.PORT || 5001
 const __dirname = path.resolve()
 
-app.use(cors())
+const corsOptions = {
+  origin: process.env.NODE_ENV === "production" 
+    ? "https://gratitude-journal-frontend.vercel.app" 
+    : "*",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json())
 
@@ -32,7 +39,7 @@ if(process.env.NODE_ENV ==="production"){
 
 
 
-app.listen(PORT, () => {
+app.listen(REACT_APP_BACKEND_URL, () => {
   connectDB()
   console.log(`Server started at http://localhost:${PORT}`);
 })
