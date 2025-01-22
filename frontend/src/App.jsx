@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './components/css/app.css'
 import EntryList from "./pages/EntryList";
-import Signin from "./pages/Signin";
+import Signin from "./pages/SignIn";
 import Signup from "./pages/Signup"
 
 
