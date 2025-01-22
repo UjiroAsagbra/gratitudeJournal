@@ -20,7 +20,7 @@ export const Signup = async(req, res) => {
     await newUser.save();
 
     const authToken = jwt.sign({ id: newUser._id }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: '1h'})
+      expiresIn: '7d'})
 
       res.status(201).json({ authToken, user: newUser });
     } catch (error) {
