@@ -17,7 +17,7 @@ export const useJournalEntry = create((set,get) => ({
     }
 
     try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+      const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
       const res = await fetch(`${backendURL}/api/entry`, {
         method: "GET",
         headers: {
@@ -53,7 +53,7 @@ export const useJournalEntry = create((set,get) => ({
       return{success:false, message: "Enter Title and Details"}
     }
     try{
-      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+      const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
       const res = await fetch(`${backendURL}/api/entry`, {
         method: "POST",
         headers: {
@@ -95,7 +95,7 @@ export const useJournalEntry = create((set,get) => ({
   }
 
   try {
-    const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+    const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
     const res = await fetch(`${backendURL}/api/entry/${id}`, {
       method: "DELETE",
       headers: {
@@ -122,7 +122,7 @@ export const useJournalEntry = create((set,get) => ({
 },
 updateEntry: async (id, updatedEntry) => {
   const authToken = localStorage.getItem('authToken');
-  const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+  const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
   const res = await fetch(`${backendURL}/api/entry/${id}`, {
     method: "PUT",
     headers: {

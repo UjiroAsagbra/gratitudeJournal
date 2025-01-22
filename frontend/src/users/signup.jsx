@@ -10,7 +10,7 @@ export const useUserSignup = create((set) => ({
       return { success: false, message: "Enter All Details" };
     }
     try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001"
+      const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001"
       const res = await fetch(`${backendURL}/api/users/signup`, {
         method: "POST",
         headers: {
@@ -42,7 +42,7 @@ export const useUserSignup = create((set) => ({
       return{success:false, message: "Enter Email and Password"}
     }
     try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+      const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
 
       const res = await fetch(`${backendURL}/api/users/signin`, {
         method: "POST",
@@ -68,7 +68,7 @@ export const useUserSignup = create((set) => ({
   return { success: false, message: error.message }}},
 
   logout: () => {
-    const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+    const backendURL = process.env.VITE_BACKEND_URL || "http://localhost:5001";
 
     fetch(`${backendURL}/api/users/logout`, { method: "POST" })
       .then((res) => res.json())
