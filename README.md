@@ -45,3 +45,11 @@ ________________________________________
 
 •	Dotenv: For managing environment variables.
 
+
+
+
+![journal1](https://github.com/user-attachments/assets/a9966a30-40ba-4c11-a875-2124e504e86b)
+
+
+![journal](https://github.com/user-attachments/assets/d2a51584-80da-48fd-adaf-82b6d2531f6e)
+
