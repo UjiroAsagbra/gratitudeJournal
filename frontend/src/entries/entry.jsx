@@ -17,7 +17,8 @@ export const useJournalEntry = create((set,get) => ({
     }
 
     try {
-      const res = await fetch("/api/entry", {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+      const res = await fetch(`${backendURL}/api/entry`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${authToken}`,
@@ -52,7 +53,8 @@ export const useJournalEntry = create((set,get) => ({
       return{success:false, message: "Enter Title and Details"}
     }
     try{
-      const res = await fetch("/api/entry", {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+      const res = await fetch(`${backendURL}/api/entry`, {
         method: "POST",
         headers: {
           "Content-Type" : "application/json",
@@ -93,7 +95,8 @@ export const useJournalEntry = create((set,get) => ({
   }
 
   try {
-    const res = await fetch(`/api/entry/${id}`, {
+    const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+    const res = await fetch(`${backendURL}/api/entry/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${authToken}`, // Include token for authentication
@@ -119,7 +122,8 @@ export const useJournalEntry = create((set,get) => ({
 },
 updateEntry: async (id, updatedEntry) => {
   const authToken = localStorage.getItem('authToken');
-  const res = await fetch(`/api/entry/${id}`, {
+  const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
+  const res = await fetch(`${backendURL}/api/entry/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
