@@ -19,8 +19,8 @@ export const Signup = async(req, res) => {
     const newUser = new User(user)
     await newUser.save();
 
-    const authToken = jwt.sign({ id: newUser._id }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: '7d'})
+    const authToken = jwt.sign({newUser: { id: newUser._id }}, process.env.ACCESS_TOKEN_SECRET, {
+      expiresIn: '1h'})
 
       res.status(201).json({ authToken, user: newUser });
     } catch (error) {
@@ -44,7 +44,7 @@ export const Signup = async(req, res) => {
         
         const authToken = jwt.sign({
           user: {
-            id: user.id,
+            id: user._id,
             username: user.username,
             email: user.email       
           },
